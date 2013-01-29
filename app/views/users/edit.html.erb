@@ -1,0 +1,12 @@
+<% provide(:title, "Edit user") %>
+<div class="row">
+	<div class="span6 offset 3">
+		<%= form_for @user do |f| %>
+			<%= render 'fields', f: f %>
+			<%= f.submit "Update", class: "btn btn-large btn-primary" %>
+		<% end %>
+		
+		<%= gravatar_for @user %>
+		<%= link_to "Change", "http://gravatar.com/emails" %>
+	</div>
+</div>
